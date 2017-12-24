@@ -1191,12 +1191,6 @@
   }, {
     "value": "A legal requirement",
     "isCorrect": true
-  }, {
-    "value": "<\/p>",
-    "isCorrect": false
-  }, {
-    "value": "<\/div>",
-    "isCorrect": true
   }]
 }, {
   "title": "What is a noble way to contribute to Canada and an excellent career choice?",
@@ -1220,12 +1214,6 @@
     "isCorrect": true
   }, {
     "value": "False",
-    "isCorrect": false
-  }, {
-    "value": "<\/p>",
-    "isCorrect": false
-  }, {
-    "value": "<\/div>",
     "isCorrect": false
   }]
 }, {

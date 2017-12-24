@@ -59,10 +59,16 @@ class QuizViewController: UIViewController {
 		questionLabel.text = question.title
 		for idx in 0..<question.answers.count {
 			if let button = self.view.viewWithTag(idx + 1) as? AnswerButton {
+				button.isHidden = false
 				button.text = question.answers[idx].value
 				button.updateBackground(for: .unanswered)
 			}
 		}
+		
+		for idx in question.answers.count..<4 { // 4 buttons
+			self.view.viewWithTag(idx+1)?.isHidden = true
+		}
+		
 		currentQuestion = question
 		self.title = "Question \(testBank.questionsAsked)"
 		didAnswer = false
@@ -89,7 +95,7 @@ class QuizViewController: UIViewController {
 		} else {
 			button.updateBackground(for: .wrong)
 			// reveal answer
-			for i in 0..<4 where currentQuestion.isCorrect(index: i) {
+			for i in 0..<currentQuestion.answers.count where currentQuestion.isCorrect(index: i) {
 				if let ansButton = self.view.viewWithTag(i+1) as? AnswerButton {
 					ansButton.updateBackground(for: .correct)
 				}
