@@ -48,9 +48,8 @@ class QuizViewController: UIViewController {
 			}))
 			
 			alertController.addAction(UIAlertAction(title: "Exit", style: .default, handler: { action in
-				alertController.dismiss(animated: true, completion: {
-					self.navigationController?.popToRootViewController(animated: true)
-				})
+				self.navigationController?.popToRootViewController(animated: true)
+				alertController.dismiss(animated: true, completion: nil)
 			}))
 			self.present(alertController, animated: true, completion: nil)
 			return

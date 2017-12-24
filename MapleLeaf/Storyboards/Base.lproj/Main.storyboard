@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-450" y="-166"/>
         </scene>
-        <!--Citizenship-->
+        <!--Citizenship Quiz-->
         <scene sceneID="QQq-r8-rWs">
             <objects>
                 <viewController id="7Jo-tB-KLG" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.64582490820000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
-                                <state key="normal" title=" Begin Test">
+                                <state key="normal" title=" Begin Quiz">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -68,7 +68,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4O1-LO-CFJ">
                                 <rect key="frame" x="32" y="158" width="311" height="101.5"/>
-                                <string key="text">Welcome to MapleLeaf, an unofficial Canadian Citizenship Test app. 
+                                <string key="text">Welcome to MapleLeaf, an unofficial Canadian Citizenship Quiz app. 
 There are a total of 455 questions from an online test bank that are randomly selected during each test. Good Luck!</string>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,7 +90,7 @@ There are a total of 455 questions from an online test bank that are randomly se
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="61D-yP-LkJ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Citizenship" largeTitleDisplayMode="always" id="J0b-0x-6dh"/>
+                    <navigationItem key="navigationItem" title="Citizenship Quiz" largeTitleDisplayMode="always" id="J0b-0x-6dh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDs-To-9gc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,7 +167,7 @@ There are a total of 455 questions from an online test bank that are randomly se
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMC-hH-Dyx">
-                                <rect key="frame" x="292" y="625" width="51" height="33"/>
+                                <rect key="frame" x="292" y="624.5" width="51" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Next ▸"/>
                                 <connections>
