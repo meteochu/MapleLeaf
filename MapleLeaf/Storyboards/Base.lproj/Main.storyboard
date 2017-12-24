@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Lz-ks-b8C">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="GDa-lp-JO8">
+            <objects>
+                <navigationController id="2Lz-ks-b8C" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="RDE-C2-ac2">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7Jo-tB-KLG" kind="relationship" relationship="rootViewController" id="EhI-5l-45i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLW-Cd-bct" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="-166"/>
+        </scene>
+        <!--Citizenship-->
+        <scene sceneID="QQq-r8-rWs">
+            <objects>
+                <viewController id="7Jo-tB-KLG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hj0-IA-W4c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVq-LG-Fkh">
+                                <rect key="frame" x="96" y="288" width="183" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.64582490820000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                <state key="normal" title=" Begin Test">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="3yX-0a-9Sm" kind="show" id="QjC-PU-G88"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOO-tc-faw">
+                                <rect key="frame" x="96" y="392" width="183" height="45"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                <state key="normal" title="View Answers">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4O1-LO-CFJ">
+                                <rect key="frame" x="32" y="158" width="311" height="101.5"/>
+                                <string key="text">Welcome to MapleLeaf, an unofficial Canadian Citizenship Test app. 
+There are a total of 455 questions from an online test bank that are randomly selected during each test. Good Luck!</string>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QOO-tc-faw" firstAttribute="leading" secondItem="BVq-LG-Fkh" secondAttribute="leading" id="0wQ-9z-yev"/>
+                            <constraint firstItem="4O1-LO-CFJ" firstAttribute="top" secondItem="61D-yP-LkJ" secondAttribute="top" constant="42" id="1s8-HB-mEO"/>
+                            <constraint firstItem="BVq-LG-Fkh" firstAttribute="centerX" secondItem="61D-yP-LkJ" secondAttribute="centerX" id="30b-01-wHr"/>
+                            <constraint firstItem="QOO-tc-faw" firstAttribute="trailing" secondItem="BVq-LG-Fkh" secondAttribute="trailing" id="GG1-Fd-4Y8"/>
+                            <constraint firstItem="BVq-LG-Fkh" firstAttribute="centerY" secondItem="61D-yP-LkJ" secondAttribute="centerY" multiplier="0.8" id="S3s-Y8-HEE"/>
+                            <constraint firstItem="61D-yP-LkJ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BVq-LG-Fkh" secondAttribute="trailing" constant="16" id="YJh-m6-WOY"/>
+                            <constraint firstItem="BVq-LG-Fkh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="61D-yP-LkJ" secondAttribute="leading" constant="16" id="Zh0-rf-Str"/>
+                            <constraint firstItem="QOO-tc-faw" firstAttribute="top" secondItem="BVq-LG-Fkh" secondAttribute="bottom" constant="54" id="iyN-uU-J3H"/>
+                            <constraint firstItem="4O1-LO-CFJ" firstAttribute="leading" secondItem="61D-yP-LkJ" secondAttribute="leading" constant="32" id="n34-HO-VGg"/>
+                            <constraint firstItem="4O1-LO-CFJ" firstAttribute="trailing" secondItem="61D-yP-LkJ" secondAttribute="trailing" constant="-32" id="qwQ-5l-i3G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="61D-yP-LkJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Citizenship" largeTitleDisplayMode="always" id="J0b-0x-6dh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qDs-To-9gc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437.60000000000002" y="-167.76611694152925"/>
+        </scene>
+        <!--Question #-->
+        <scene sceneID="6YA-oA-VzH">
+            <objects>
+                <viewController title="Question #" id="3yX-0a-9Sm" customClass="QuizViewController" customModule="MapleLeaf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xfd-bj-VOM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el7-TV-kXZ">
+                                <rect key="frame" x="32" y="180" width="311" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8gb-Ro-AXO">
+                                <rect key="frame" x="32" y="259.5" width="311" height="360"/>
+                                <subviews>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-Sy-uvL" customClass="AnswerButton" customModule="MapleLeaf" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="82.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.64582490820000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Answer 1"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="L2d-Go-vEo" appends="YES" id="7Lu-cU-ukW"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5p-07-hI3" customClass="AnswerButton" customModule="MapleLeaf" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92.5" width="311" height="82.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.64582490820000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Answer 2"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="646-Ii-YIQ" appends="YES" id="IFT-GA-wwT"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTi-1y-eqU" customClass="AnswerButton" customModule="MapleLeaf" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="185" width="311" height="82.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.64582490820000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Answer 3"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="mSm-aq-sB1" appends="YES" id="iso-Dt-Q5W"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy3-dM-S3e" customClass="AnswerButton" customModule="MapleLeaf" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="277.5" width="311" height="82.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.64582490820000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Answer 4"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Lc0-Fe-jhh" appends="YES" id="be0-w4-k1r"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="360" id="Yaq-0o-7za"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMC-hH-Dyx">
+                                <rect key="frame" x="292" y="625" width="51" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Next ▸"/>
+                                <connections>
+                                    <action selector="didSelectNextButton:" destination="3yX-0a-9Sm" eventType="touchUpInside" id="eMv-1w-Psa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Correct" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSX-LT-YMT">
+                                <rect key="frame" x="32" y="631.5" width="70.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sSX-LT-YMT" firstAttribute="leading" secondItem="8gb-Ro-AXO" secondAttribute="leading" id="46E-aS-vpv"/>
+                            <constraint firstItem="ZMC-hH-Dyx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sSX-LT-YMT" secondAttribute="trailing" id="C4O-9U-nUK"/>
+                            <constraint firstItem="el7-TV-kXZ" firstAttribute="leading" secondItem="d0g-A4-dRu" secondAttribute="leading" constant="32" id="Cxj-pG-0mC"/>
+                            <constraint firstItem="ZMC-hH-Dyx" firstAttribute="trailing" secondItem="8gb-Ro-AXO" secondAttribute="trailing" id="E7C-jQ-a58"/>
+                            <constraint firstItem="el7-TV-kXZ" firstAttribute="top" secondItem="d0g-A4-dRu" secondAttribute="top" constant="64" id="ElC-u5-D6N"/>
+                            <constraint firstItem="8gb-Ro-AXO" firstAttribute="trailing" secondItem="el7-TV-kXZ" secondAttribute="trailing" id="Vec-gB-0Tz"/>
+                            <constraint firstItem="8gb-Ro-AXO" firstAttribute="centerY" secondItem="d0g-A4-dRu" secondAttribute="centerY" constant="48" id="ggg-gB-SxM"/>
+                            <constraint firstItem="d0g-A4-dRu" firstAttribute="bottom" secondItem="sSX-LT-YMT" secondAttribute="bottom" constant="16" id="kZd-oT-Enp"/>
+                            <constraint firstItem="ZMC-hH-Dyx" firstAttribute="baseline" secondItem="sSX-LT-YMT" secondAttribute="baseline" id="oeO-Ge-6BL"/>
+                            <constraint firstItem="8gb-Ro-AXO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="d0g-A4-dRu" secondAttribute="leading" constant="32" id="rvp-dJ-bS8"/>
+                            <constraint firstItem="8gb-Ro-AXO" firstAttribute="centerX" secondItem="d0g-A4-dRu" secondAttribute="centerX" id="sym-aF-Tu2"/>
+                            <constraint firstItem="d0g-A4-dRu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8gb-Ro-AXO" secondAttribute="trailing" constant="32" id="vuz-tr-8NC"/>
+                            <constraint firstItem="d0g-A4-dRu" firstAttribute="trailing" secondItem="el7-TV-kXZ" secondAttribute="trailing" constant="32" id="zug-tQ-7l0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d0g-A4-dRu"/>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="ZMC-hH-Dyx" id="UGF-fX-lpJ"/>
+                        <outlet property="questionLabel" destination="el7-TV-kXZ" id="cwZ-QW-QnH"/>
+                        <outlet property="statsLabel" destination="sSX-LT-YMT" id="XMq-CL-uCq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5T2-oI-ePj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="L2d-Go-vEo" userLabel="Answer 1 Tap">
+                    <connections>
+                        <action selector="didSelectAnswer:" destination="3yX-0a-9Sm" id="RVS-iT-SLt"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="646-Ii-YIQ" userLabel="Answer 2 Tap">
+                    <connections>
+                        <action selector="didSelectAnswer:" destination="3yX-0a-9Sm" id="cfs-nH-BwZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="mSm-aq-sB1" userLabel="Answer 3 Tap">
+                    <connections>
+                        <action selector="didSelectAnswer:" destination="3yX-0a-9Sm" id="YmZ-Cu-Izq"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Lc0-Fe-jhh" userLabel="Answer 4 Tap">
+                    <connections>
+                        <action selector="didSelectAnswer:" destination="3yX-0a-9Sm" id="Iid-m8-rX6"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1287" y="-167"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="1" green="0.050980392156862744" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+</document>
