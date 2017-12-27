@@ -18,7 +18,7 @@ class QuizViewController: UIViewController {
 	@IBOutlet weak var statsLabel: UILabel!
 	
 	// MARK: Controller
-	private var testBank = QuestionBank.shared.createTest(numQuestions: 20)
+	private var testBank = QuizController.shared.currentQuiz.createQuiz()
 	
 	private var currentQuestion: Question!
 	
@@ -78,7 +78,7 @@ class QuizViewController: UIViewController {
 		currentQuestion = nil
 		numCorrect = 0
 		didAnswer = false
-		testBank = QuestionBank.shared.createTest(numQuestions: 20)
+		testBank = QuizController.shared.currentQuiz.createQuiz()
 		refreshQuestion()
 	}
 	

@@ -8,24 +8,16 @@
 
 import UIKit
 
-class QuestionBank: NSObject {
+struct QuestionBank: Codable {
 	
-	static let shared: QuestionBank = QuestionBank()
+	var title: String
 	
-	var questions: [Question] = []
+	var description: String
 	
-	override init() {
-		super.init()
-		let decoder = JSONDecoder()
-		if let path = Bundle.main.path(forResource: "questions", ofType: "json"),
-			let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
-			let questions = try? decoder.decode([Question].self, from: data) {
-			self.questions = questions
-		}
-	}
+	var questions: [Question]
 	
-	func createTest(numQuestions: Int) -> Test {
-		return Test(questions: questions.choose(numQuestions))
+	func createQuiz() -> Test {
+		return Test(questions: questions.choose(Preferences.numQuestions))
 	}
 
 }
