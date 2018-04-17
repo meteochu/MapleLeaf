@@ -163,6 +163,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Answers" id="4vu-W2-7Y7"/>
+                    <connections>
+                        <segue destination="UQF-a3-NLB" kind="show" identifier="solutionSegue" id="oZb-bD-J7y"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAJ-kM-Qin" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -192,7 +195,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Upz-fj-2oY">
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minimumValue="5" maximumValue="455" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Upz-fj-2oY">
                                                     <rect key="frame" x="270" y="7" width="94" height="29"/>
                                                     <color key="tintColor" red="0.0" green="0.64582490820000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
@@ -273,7 +276,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el7-TV-kXZ">
-                                <rect key="frame" x="32" y="180" width="311" height="25.5"/>
+                                <rect key="frame" x="32" y="183" width="311" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -357,7 +360,6 @@
                             <constraint firstItem="ZMC-hH-Dyx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sSX-LT-YMT" secondAttribute="trailing" id="C4O-9U-nUK"/>
                             <constraint firstItem="el7-TV-kXZ" firstAttribute="leading" secondItem="d0g-A4-dRu" secondAttribute="leading" constant="32" id="Cxj-pG-0mC"/>
                             <constraint firstItem="ZMC-hH-Dyx" firstAttribute="trailing" secondItem="8gb-Ro-AXO" secondAttribute="trailing" id="E7C-jQ-a58"/>
-                            <constraint firstItem="el7-TV-kXZ" firstAttribute="top" secondItem="d0g-A4-dRu" secondAttribute="top" constant="64" id="ElC-u5-D6N"/>
                             <constraint firstItem="8gb-Ro-AXO" firstAttribute="trailing" secondItem="el7-TV-kXZ" secondAttribute="trailing" id="Vec-gB-0Tz"/>
                             <constraint firstItem="8gb-Ro-AXO" firstAttribute="centerY" secondItem="d0g-A4-dRu" secondAttribute="centerY" constant="48" id="ggg-gB-SxM"/>
                             <constraint firstItem="d0g-A4-dRu" firstAttribute="bottom" secondItem="sSX-LT-YMT" secondAttribute="bottom" constant="16" id="kZd-oT-Enp"/>
@@ -366,6 +368,7 @@
                             <constraint firstItem="8gb-Ro-AXO" firstAttribute="centerX" secondItem="d0g-A4-dRu" secondAttribute="centerX" id="sym-aF-Tu2"/>
                             <constraint firstItem="d0g-A4-dRu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8gb-Ro-AXO" secondAttribute="trailing" constant="32" id="vuz-tr-8NC"/>
                             <constraint firstItem="d0g-A4-dRu" firstAttribute="trailing" secondItem="el7-TV-kXZ" secondAttribute="trailing" constant="32" id="zug-tQ-7l0"/>
+                            <constraint firstItem="el7-TV-kXZ" firstAttribute="centerY" secondItem="d0g-A4-dRu" secondAttribute="centerY" multiplier="0.5" id="zzd-fy-Csn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d0g-A4-dRu"/>
                     </view>
@@ -397,7 +400,87 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1335" y="-537"/>
+            <point key="canvasLocation" x="1334" y="-530"/>
+        </scene>
+        <!--Solution-->
+        <scene sceneID="vBt-sH-4UM">
+            <objects>
+                <viewController title="Solution" id="UQF-a3-NLB" customClass="SolutionViewController" customModule="MapleLeaf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oE9-ln-551">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XE-Ww-bik">
+                                <rect key="frame" x="32" y="180" width="311" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="21u-S9-XRs">
+                                <rect key="frame" x="32" y="259.5" width="311" height="360"/>
+                                <subviews>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXu-b3-GIV" customClass="AnswerButton" customModule="MapleLeaf" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="82.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.64582490820000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Answer 1"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EV0-wB-D9k" customClass="AnswerButton" customModule="MapleLeaf" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92.5" width="311" height="82.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.64582490820000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Answer 2"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy5-JA-Q8I" customClass="AnswerButton" customModule="MapleLeaf" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="185" width="311" height="82.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.64582490820000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Answer 3"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZw-CO-qo8" customClass="AnswerButton" customModule="MapleLeaf" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="277.5" width="311" height="82.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.64582490820000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Answer 4"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="360" id="xoS-wz-4eJ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wW9-cD-RZn" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="21u-S9-XRs" secondAttribute="trailing" constant="32" id="0wy-zs-tly"/>
+                            <constraint firstItem="21u-S9-XRs" firstAttribute="centerY" secondItem="wW9-cD-RZn" secondAttribute="centerY" constant="48" id="2wF-92-WIW"/>
+                            <constraint firstItem="21u-S9-XRs" firstAttribute="centerX" secondItem="wW9-cD-RZn" secondAttribute="centerX" id="O7L-Bu-yf8"/>
+                            <constraint firstItem="21u-S9-XRs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wW9-cD-RZn" secondAttribute="leading" constant="32" id="Ohh-jV-IY3"/>
+                            <constraint firstItem="21u-S9-XRs" firstAttribute="trailing" secondItem="4XE-Ww-bik" secondAttribute="trailing" id="bGF-Ki-GH6"/>
+                            <constraint firstItem="4XE-Ww-bik" firstAttribute="top" secondItem="wW9-cD-RZn" secondAttribute="top" constant="64" id="ivq-Oa-5Z7"/>
+                            <constraint firstItem="wW9-cD-RZn" firstAttribute="trailing" secondItem="4XE-Ww-bik" secondAttribute="trailing" constant="32" id="ssw-E9-xeT"/>
+                            <constraint firstItem="4XE-Ww-bik" firstAttribute="leading" secondItem="wW9-cD-RZn" secondAttribute="leading" constant="32" id="u6R-Jh-drN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wW9-cD-RZn"/>
+                    </view>
+                    <connections>
+                        <outlet property="questionLabel" destination="4XE-Ww-bik" id="yWF-4b-7l1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PMQ-cV-eO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2071" y="198"/>
         </scene>
     </scenes>
     <color key="tintColor" red="1" green="0.050980392159999999" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>

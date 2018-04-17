@@ -13,6 +13,8 @@ class AnswersViewController: UITableViewController {
 	private var allQuestions = QuizController.shared.currentQuiz.questions
 	// cache the answer key for faster fetching
 	private var answerKey: [IndexPath: String] = [:]
+	// current selected question
+	private var question: Question?
 	
 	override func numberOfSections(in tableView: UITableView) -> Int {
 		return 1
@@ -25,7 +27,7 @@ class AnswersViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 		let question = allQuestions[indexPath.row]
-		cell.textLabel!.text = question.title
+		cell.textLabel!.text = "\(indexPath.row + 1). \(question.title)"
 		if let answer = answerKey[indexPath] {
 			cell.detailTextLabel!.text = answer
 		} else {
@@ -39,6 +41,13 @@ class AnswersViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
+		question = allQuestions[indexPath.row]
+		self.performSegue(withIdentifier: "solutionSegue", sender: self)
+	}
+
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let viewController = segue.destination as? SolutionViewController else { return }
+		viewController.currentQuestion = question
 	}
 	
 }

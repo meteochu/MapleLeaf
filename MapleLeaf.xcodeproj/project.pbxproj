@@ -15,6 +15,7 @@
 		A13A16591FF315F1003CB235 /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13A16581FF315F1003CB235 /* QuizController.swift */; };
 		A13A165B1FF317BC003CB235 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13A165A1FF317BC003CB235 /* SettingsViewController.swift */; };
 		A13A165D1FF31C0F003CB235 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13A165C1FF31C0F003CB235 /* RootViewController.swift */; };
+		A163AAC420014BE500786A05 /* SolutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A163AAC320014BE500786A05 /* SolutionViewController.swift */; };
 		A18604901FEF787800DB83AF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A186048F1FEF787800DB83AF /* Question.swift */; };
 		A18604921FEF788200DB83AF /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18604911FEF788200DB83AF /* Answer.swift */; };
 		A18604941FEF78D800DB83AF /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18604931FEF78D800DB83AF /* Test.swift */; };
@@ -38,6 +39,7 @@
 		A13A16581FF315F1003CB235 /* QuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
 		A13A165A1FF317BC003CB235 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A13A165C1FF31C0F003CB235 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		A163AAC320014BE500786A05 /* SolutionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionViewController.swift; sourceTree = "<group>"; };
 		A186048F1FEF787800DB83AF /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		A18604911FEF788200DB83AF /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		A18604931FEF78D800DB83AF /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				A13A165C1FF31C0F003CB235 /* RootViewController.swift */,
 				A18604981FEF790800DB83AF /* QuizViewController.swift */,
 				A18F3C8E1FF3091500FD606D /* AnswersViewController.swift */,
+				A163AAC320014BE500786A05 /* SolutionViewController.swift */,
 				A13A165A1FF317BC003CB235 /* SettingsViewController.swift */,
 				A186049A1FEF803800DB83AF /* AnswerButton.swift */,
 				A186049C1FEF8E0000DB83AF /* QuestionBank.swift */,
@@ -204,6 +207,7 @@
 				A186049B1FEF803800DB83AF /* AnswerButton.swift in Sources */,
 				A13A165D1FF31C0F003CB235 /* RootViewController.swift in Sources */,
 				A13A165B1FF317BC003CB235 /* SettingsViewController.swift in Sources */,
+				A163AAC420014BE500786A05 /* SolutionViewController.swift in Sources */,
 				A18604921FEF788200DB83AF /* Answer.swift in Sources */,
 				A18604941FEF78D800DB83AF /* Test.swift in Sources */,
 			);
@@ -345,6 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TSCXJ4KWQ4;
 				INFOPLIST_FILE = "$(SRCROOT)/MapleLeaf/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andyliang.MapleLeaf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -360,6 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TSCXJ4KWQ4;
 				INFOPLIST_FILE = "$(SRCROOT)/MapleLeaf/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andyliang.MapleLeaf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
