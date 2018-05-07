@@ -22,12 +22,14 @@ class SolutionViewController: UIViewController {
 	private func updateQuestion() {
 		guard let question = currentQuestion, let label = questionLabel else { return }
 		label.text = question.title
-		for idx in 0..<question.answers.count {
-			if let button = self.view.viewWithTag(idx + 1) as? AnswerButton {
-				button.isHidden = false
-				button.text = question.answers[idx].value
-				let state = question.isCorrect(index: idx) ? AnswerState.correct : .unanswered
-				button.updateBackground(for: state)
+		UIView.animate(withDuration: 0.3) {
+			for idx in 0..<question.answers.count {
+				if let button = self.view.viewWithTag(idx + 1) as? AnswerButton {
+					button.isHidden = false
+					button.text = question.answers[idx].value
+					let state = question.isCorrect(index: idx) ? AnswerState.correct : .unanswered
+					button.updateBackground(for: state)
+				}
 			}
 		}
 		

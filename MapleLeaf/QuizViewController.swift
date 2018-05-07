@@ -87,16 +87,23 @@ class QuizViewController: UIViewController {
 		guard !didAnswer else { return }
 		didAnswer = true
 		guard let button = sender.view as? AnswerButton else { return }
+		
 		if currentQuestion.isCorrect(index: button.tag-1) {
 			// show that the answer is correct
-			button.updateBackground(for: .correct)
+			UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
+				button.updateBackground(for: .correct)
+			}, completion: nil)
+			
 			numCorrect += 1
 		} else {
-			button.updateBackground(for: .wrong)
 			// reveal answer
 			for i in 0..<currentQuestion.answers.count where currentQuestion.isCorrect(index: i) {
 				if let ansButton = self.view.viewWithTag(i+1) as? AnswerButton {
-					ansButton.updateBackground(for: .correct)
+					UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
+						// animate the 2 buttons together...
+						ansButton.updateBackground(for: .correct)
+						button.updateBackground(for: .wrong)
+					}, completion: nil)
 				}
 			}
 		}
